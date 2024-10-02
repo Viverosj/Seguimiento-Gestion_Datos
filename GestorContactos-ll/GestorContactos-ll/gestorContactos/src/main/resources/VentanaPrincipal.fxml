@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="506.0" prefWidth="811.0" style="-fx-background-color: #CCCCCC;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.gestorcontactos.controlador.VentanaPrincipalControlador">
+
+    <Label fx:id="GESTORDECONTACTOS" contentDisplay="CENTER" layoutX="324.0" layoutY="14.0" prefHeight="36.0" prefWidth="319.0" textFill="#4c0a538c">
+        <font>
+            <Font name="AdobeDevanagari-Bold" size="30.0" />
+        </font>
+        <effect>
+            <Lighting bumpInput="$null" diffuseConstant="1.48" specularConstant="0.54" specularExponent="21.83" surfaceScale="1.68">
+                <light>
+                    <Light.Distant />
+                </light>
+            </Lighting>
+        </effect>
+    </Label>
+
+    <Label layoutX="34.0" layoutY="111.0" text="NOMBRE" textAlignment="CENTER">
+        <font>
+            <Font name="AdobeDevanagari-Bold" size="12.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtNombre" layoutX="107.0" layoutY="106.0" prefHeight="26.0" prefWidth="147.0" />
+
+    <Label layoutX="34.0" layoutY="158.0" text="APELLIDO" textAlignment="CENTER">
+        <font>
+            <Font name="AdobeDevanagari-Bold" size="12.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtApellido" layoutX="107.0" layoutY="153.0" prefHeight="26.0" prefWidth="147.0" />
+
+    <Label layoutX="32.0" layoutY="208.0" text="TELEFONO" textAlignment="CENTER">
+        <font>
+            <Font name="AdobeDevanagari-Bold" size="12.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtTelefono" layoutX="107.0" layoutY="203.0" prefHeight="26.0" prefWidth="147.0" />
+
+    <Label layoutX="32.0" layoutY="255.0" prefHeight="18.0" prefWidth="87.0" text="CUMPLEAÑOS" textAlignment="CENTER">
+        <font>
+            <Font name="AdobeDevanagari-Bold" size="12.0" />
+        </font>
+    </Label>
+    <DatePicker fx:id="txtFechaCumple" layoutX="107.0" layoutY="251.0" prefHeight="26.0" prefWidth="147.0" />
+
+    <Label layoutX="34.0" layoutY="304.0" text="CORREO" textAlignment="CENTER">
+        <font>
+            <Font name="AdobeDevanagari-Bold" size="12.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtCorreo" layoutX="107.0" layoutY="299.0" prefHeight="26.0" prefWidth="147.0" />
+
+    <Label layoutX="34.0" layoutY="349.0" text="URL" textAlignment="CENTER">
+        <font>
+            <Font name="AdobeDevanagari-Bold" size="12.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtURL" layoutX="107.0" layoutY="344.0" prefHeight="26.0" prefWidth="147.0" />
+
+    <Button fx:id="botonAgregarContacto" layoutX="144.0" layoutY="392.0" mnemonicParsing="false" onAction="#agregarContacto" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #3399FF;" text="AGREGAR" />
+
+    <TableView fx:id="tablaContactos" layoutX="272.0" layoutY="105.0" prefHeight="316.0" prefWidth="506.0" style="-fx-background-color: #999999;">
+        <columns>
+            <TableColumn fx:id="colNombre" prefWidth="63.600006103515625" text="NOMBRE" />
+            <TableColumn fx:id="colApellido" prefWidth="73.0" text="APELLIDO" />
+            <TableColumn fx:id="colTelefono" prefWidth="81.20001220703125" text="TELEFONO" />
+            <TableColumn fx:id="colCumpleanos" prefWidth="93.0" text="CUMPLEAÑOS" />
+            <TableColumn fx:id="colCorreo" prefWidth="102.79998779296875" text="CORREO" />
+            <TableColumn fx:id="colPerfil" prefWidth="86.0" text="URL" />
+        </columns>
+    </TableView>
+
+    <Button fx:id="botonEditarContacto" layoutX="277.0" layoutY="445.0" mnemonicParsing="false" onAction="#editarContacto" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #3399FF;" text="ACTUALIZAR" />
+    <Button fx:id="botonEliminarContacto" layoutX="382.0" layoutY="446.0" mnemonicParsing="false" onAction="#eliminarContacto" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #FF0000;" text="ELIMINAR" />
+    <Button fx:id="botonListarContactos" layoutX="624.0" layoutY="447.0" mnemonicParsing="false" onAction="#ListarContactos" prefHeight="26.0" prefWidth="152.0" style="-fx-background-color: #3399FF;" text="TODOS LOS CONTACTOS" />
+
+    <Label layoutX="273.0" layoutY="71.0" textAlignment="CENTER">
+        <font>
+            <Font name="AdobeDevanagari-Bold" size="14.0" />
+        </font>
+    </Label>
+
+    <ComboBox fx:id="txtFiltroNomTel" layoutX="272.0" layoutY="67.0" prefHeight="25.0" prefWidth="160.0" />
+    <TextField fx:id="txtNomTel" layoutX="461.0" layoutY="69.0" prefHeight="26.0" prefWidth="160.0" />
+
+    <Button fx:id="botonBuscarContacto" layoutX="652.0" layoutY="70.0" mnemonicParsing="false" onAction="#buscarContacto" style="-fx-background-color: #3399FF;" text="BUSCAR " />
+
+</AnchorPane>
